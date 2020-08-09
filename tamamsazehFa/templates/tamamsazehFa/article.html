@@ -1,0 +1,25 @@
+{% extends "tamamsazehFa/base.html" %}
+{% block articles %}text-warning{% endblock %}
+{% block content %}
+    <style>
+body {
+ background-color: #ffc107;
+}</style>
+
+    <h1 class="bg-dark text-white text-right " style="padding: 10px;font-family: Zar;!important;font-size: 40px;margin-top: 10px;">&nbsp; مقالات</h1>
+    <div class="container text-right" style="padding: 10px">
+    <table >
+        {% for item in articles %}
+          <tr>
+              <div class="bg-dark text-white rounded" style="padding: 10px;font-family: Zar;!important;font-size: 40px;">
+                <h2> &nbsp نام نویسنده : {{ item.author }} </h2>
+                <h2> &nbsp عنوان : {{ item.name }}</h2>
+                <a href='/fa/articleView{{item.pdf.url}}' class="text-warning text-right " style="direction: rtl"><h4>فایل pdf را مشاهده کنید</h4> </a>
+              </div>
+          </tr>
+            <br>
+            <br>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

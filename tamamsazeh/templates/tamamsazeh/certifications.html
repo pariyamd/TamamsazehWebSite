@@ -1,0 +1,89 @@
+{% extends "tamamsazeh/base.html" %}
+{% block certifications %}text-warning{% endblock %}
+{% block content %}
+<style>
+body {
+ background-color: #ffc107;
+    height: 100%;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+#myContainer{
+    text-align: center;
+    list-style-type: none;
+    min-height: 100%;
+    position:relative;
+}
+#insider{
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+
+}
+#noPadding{
+    padding-left: 0;
+    padding-right: 0;
+}
+.color{
+    background: #16181b;
+}
+</style>
+    <body>
+    <div class="container " id="myContainer">
+    <ul class="container" id="insider">
+        <li>
+        <div class="container text-white rounded bg-dark row">
+            <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark w-100" style="font-family: 'Vollkorn', serif">
+                <h1 class="display-4 font-italic">Certifications</h1>
+                <p class="">We are proud to announce that projects delivered by Tamamsazeh was honored by a satisfaction certification</p>
+            </div>
+        </div>
+        </li>
+        <br>
+        <br>
+        <br>
+        <li>
+        <div class="container text-white rounded bg-dark row" id="noPadding" >
+            <ul  class="col" id="myMenu" >
+                <li {% if id == 1 %} class="color" {% endif %}><a href="/en/certifications/1">1</a></li>
+                <li {% if id == 2 %} class="color" {% endif %}><a href="/en/certifications/2">2</a></li>
+                <li {% if id == 3 %} class="color" {% endif %}><a href="/en/certifications/3">3</a></li>
+                <li {% if id == 4 %} class="color" {% endif %}><a href="/en/certifications/4">4</a></li>
+                <li {% if id == 5 %} class="color" {% endif %}><a href="/en/certifications/5">5</a></li>
+                <li {% if id == 6 %} class="color" {% endif %}><a href="/en/certifications/6">6</a></li>
+                <li {% if id == 7 %} class="color" {% endif %}><a href="/en/certifications/7">7</a></li>
+                <li {% if id == 8 %} class="color" {% endif %}><a href="/en/certifications/8">8</a></li>
+                <li {% if id == 9 %} class="color" {% endif %}><a href="/en/certifications/9">9</a></li>
+                </ul>
+            <ul class="col color rounded" id="myMenu">
+                    {% if id == 1 %}<img src="/static/img/certification/1.png">{% endif %}
+                    {% if id == 2 %}<img src="/static/img/certification/2.png">{% endif %}
+                    {% if id == 3 %}<img src="/static/img/certification/3.png">{% endif %}
+                    {% if id == 4 %}<img src="/static/img/certification/4.png">{% endif %}
+                    {% if id == 5 %}<img src="/static/img/certification/5.png">{% endif %}
+                    {% if id == 6 %}<img src="/static/img/certification/6.png">{% endif %}
+                    {% if id == 7 %}<img src="/static/img/certification/7.png">{% endif %}
+                </ul>
+        </div>
+        </li>
+    </ul>
+    </div>
+    </body>
+{% endblock %}

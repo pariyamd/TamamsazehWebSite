@@ -1,0 +1,28 @@
+{% extends "tamamsazeh/base.html" %}
+{% block articles %}text-warning{% endblock %}
+{% block content %}
+    <style>
+body {
+    height: 100%;
+ background-color: #ffc107;
+}</style>
+
+
+    <h1 class="bg-dark text-white" style="padding: 10px;">&nbsp; Articles</h1>
+<div  style="margin-right: 20px;margin-left:20px;padding-right: 0px;">
+{#    <div class="container overflow-hidden" style="padding: 10px">#}
+    <table >
+        {% for item in articles %}
+            <br>
+            <tr>
+              <div class="bg-dark text-white rounded" style="padding: 10px">
+                <h2> &nbsp Author's Name : {{ item.author }}</h2>
+                <h2> &nbsp Title : {{ item.name }}</h2>
+                <a href='/en/articleView{{item.pdf.url}}' class="text-warning"><h4>view pdf here </h4> </a>
+              </div>
+          </tr>
+            <br>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{#https://pspdfkit.com/blog/2019/implement-pdf-viewer-pdf-js/#}
+{% extends "tamamsazeh/base.html" %}
+{% block css %}
+        <link rel="stylesheet" href="/static/css/pdfViewerStyle.css">
+{% endblock %}
+{% block style %}
+
+{% endblock %}
+{% block content %}
+
+<div id="app">
+  <div id="toolbar">
+    <div id="pager">
+     <button data-pager="prev">prev</button>
+     <button data-pager="next">next</button>
+    </div>
+    <div id="page-mode">
+     <label>Page Mode <input type="number" value="1" min="1"></label>
+    </div>
+  </div>
+  <div id="viewport" role="main"></div>
+</div>
+<script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
+<script src="/static/js/index.js"></script>
+<script>
+  window.onload = () => {
+    initPDFViewer('/{{ link }}')
+  }
+</script>
+{% endblock %}

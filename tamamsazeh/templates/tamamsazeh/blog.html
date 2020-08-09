@@ -1,0 +1,32 @@
+{% extends "tamamsazeh/base.html" %}
+ {% block blog %}text-warning{% endblock %}
+{% block content %}
+    <style>
+        body {
+            background-color: #ffc107;
+        }</style>
+
+    <h1 class="bg-dark text-white" style="padding: 10px;">&nbsp;Blog</h1>
+    <h2 class="bg-dark text-white" style="padding: 10px;">&nbsp;You can follow News,felan bisar and more!</h2>
+    <div  class="overflow-auto " style="height: 420px;margin-right: 20px;padding-right: 0px;" >
+    {% for item in posts %}
+        <div class="accordion" id="accordionExample" style="padding-bottom: 10px">
+            <div class="card container bg-dark text-white">
+                <div class="card-header row" id="headingOne">
+                    <h2 class="mb-0">{{ item.name }}</h2>
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne{{ item.id }}" aria-expanded="true" aria-controls="collapseOne">
+                        <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="25px" height="25px"><g><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"
+                                          data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFC107"/></g></g></svg>
+                    </button>
+                </div>
+                <div id="collapseOne{{ item.id }}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body row justify-content-between">
+                        <div class="col-5">{{ item.text }}</div>
+                        <div class="col-4"><img  class="rounded" src="{{ item.image.url }}" width="256"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

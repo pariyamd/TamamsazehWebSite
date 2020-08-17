@@ -15,7 +15,8 @@ def projects(request):
 
 def projectView(request,id):
     return render(request=request, template_name='tamamsazeh/projectView.html',context={
-        'project': Project.objects.all()[id]
+        'projects': Project.objects.all(),
+        'id':id
     })
 
 

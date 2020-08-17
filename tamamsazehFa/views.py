@@ -23,7 +23,7 @@ def main_page(request):
 
 def projectView(request,id):
     return render(request=request, template_name='tamamsazehFa/projectView.html',context={
-        'project': ProjectFa.objects.all()[id]
+        'project': ProjectFa.objects.all()[id-1]
     })
 
 

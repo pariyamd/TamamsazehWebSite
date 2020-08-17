@@ -13,17 +13,17 @@ def projects(request):
     })
 
 
-def projectView(request,id):
-    return render(request=request, template_name='tamamsazeh/projectView.html',context={
-        'project': Project.objects.all()
-    })
-
-
 def main_page(request):
     return render(request=request, template_name='tamamsazeh/main_page.html',context={
         'projects': Project.objects.all(),
         'genres': GENRE,
         'num':7
+    })
+
+
+def projectView(request,id):
+    return render(request=request, template_name='tamamsazeh/projectView.html',context={
+        'project': Project.objects.all()[id]
     })
 
 

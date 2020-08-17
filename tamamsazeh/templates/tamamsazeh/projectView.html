@@ -6,8 +6,6 @@
         }
     </style>
     <div class="container">
-        {%for project in projects%}
-        {% if project.id == num_id %}
         <div class="bg-warning p-4 text-center rounded" style="margin-top: 20px">
             <h1 class="text-dark" >{{ project.Title }}</h1>
         </div>
@@ -31,7 +29,5 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        {%endif%}
-        {%endfor%}
     </div>
 {% endblock %}

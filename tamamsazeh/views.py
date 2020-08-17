@@ -6,6 +6,7 @@ GENRE = ['Oil, Gas and Petrochemical','Educational and Cultural Structures',
          'Steal Structures and Bridges',
          'Industrial and Civil Structure','Mass production', 'Road construction', 'Others']
 
+
 def projects(request):
     return render(request=request, template_name='tamamsazeh/projects.html',context={
         'projects': Project.objects.all()
@@ -14,7 +15,7 @@ def projects(request):
 
 def projectView(request,id):
     return render(request=request, template_name='tamamsazeh/projectView.html',context={
-        'project': Project.objects.all()[id-1]
+        'project': Project.objects.all()[id]
     })
 
 

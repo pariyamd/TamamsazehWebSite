@@ -46,19 +46,19 @@
                 <div>
                     <div class="table-responsive">
                       <table class="table text-white">
-{#                          <thead>#}
-{#                        <tr>#}
-{#                          <th scope="col">   </th>#}
-{#                          <th scope="col">Title</th>#}
-{#                          <th scope="col"></th>#}
-{#                          <th scope="col"></th>#}
-{#                        </tr>#}
-{#                      </thead>#}
+<!--{#                          <thead>#}-->
+<!--{#                        <tr>#}-->
+<!--{#                          <th scope="col">   </th>#}-->
+<!--{#                          <th scope="col">Title</th>#}-->
+<!--{#                          <th scope="col"></th>#}-->
+<!--{#                          <th scope="col"></th>#}-->
+<!--{#                        </tr>#}-->
+<!--{#                      </thead>#}-->
                         {%for item in projects %}
                             <tbody>
                             {% if item.genre == '1' %}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td><a class="text-warning" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}
@@ -70,8 +70,12 @@
             </div>
 
             </span></section>
-        <section id="edu"><span>
 
+
+
+
+
+        <section id="edu"><span>
             <div  class="text-white rounded" style="opacity: 0.8;background: black ;">
                 <div>
                     <h1 class="title">Educational and Cultural Structures</h1>
@@ -83,7 +87,7 @@
                             <tbody>
                             {% if item.genre == '2' %}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td><a class="text-warning" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}
@@ -94,6 +98,14 @@
                 </div>
             </div>
         </span></section>
+
+
+
+
+
+
+
+
         <section id="str"><span>
             <div  class="text-white rounded" style="opacity: 0.8;background: black ;">
                 <div>
@@ -106,7 +118,7 @@
                             <tbody>
                             {% if item.genre == '3' %}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td><a class="text-warning" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}
@@ -129,7 +141,7 @@
                             <tbody>
                             {% if item.genre == '4'%}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td><a class="text-dark" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}
@@ -152,7 +164,7 @@
                             <tbody>
                             {% if item.genre == '5' %}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td><a class="text-warning" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}
@@ -176,7 +188,7 @@
                             <tbody>
                             {% if item.genre == '6' %}
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">|</th>
                                   <td ><a class="text-warning" href="/en/projectView/{{item.id}}" >{{ item.Title }}</a></td>
                                 </tr>
                             {% endif %}

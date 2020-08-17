@@ -9,7 +9,7 @@ GENRE = ['نفت گاز و پتروشیمی','مراکز علمی آموزشی �
 
 def projects(request):
     return render(request=request, template_name='tamamsazehFa/projects.html',context={
-        'projects': ProjectFa.objects.all()
+        'projectFas': ProjectFa.objects.all()
     })
 
 
